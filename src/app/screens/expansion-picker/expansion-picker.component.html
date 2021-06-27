@@ -24,9 +24,9 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
 -->
 <GridLayout>
   <ListView [items]="expansions">
-    <ng-template let-expansion="expansion">
-      <StackLayout [nsRouterLink]="['/expansion', expansion.id]">
-        <Label [text]="expansion.name"></Label>
+    <ng-template let-item="item">
+      <StackLayout [nsRouterLink]="['./expansion', item.id]">
+        <Label [text]="item.name"></Label>
       </StackLayout>
     </ng-template>
   </ListView>
